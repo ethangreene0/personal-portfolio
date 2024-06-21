@@ -12,7 +12,7 @@ export const Footer = () => {
           <Col size={12} sm={6}>
             <img src={logo} alt="Logo" />
           </Col>
-          <Col size={12} sm={6} className="text-center text-sm-end">
+          <Col size={12} sm={6} className="text-center text-sm-end" style={{marginTop:"20px"}}>
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/ethan-greene/" target="_blank" rel="noopener noreferrer">
                 <img src={navIcon1} alt="LinkedIn Icon" />

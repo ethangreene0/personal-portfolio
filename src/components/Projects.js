@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import resumeImg from "../assets/img/resume-img.jpg";
+import fadedcolor from "../assets/img/fadedcolor.jpg"
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -22,12 +23,38 @@ export const Projects = () => {
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Personal Portfolio",
+      description: "Lol",
       imgUrl: projImg3,
     },
   ];
 
+  const experience = [
+    {
+        title: "McDonalds Canada",
+        description: "Swing Manager",
+        imgUrl: fadedcolor,
+        
+    },
+    {
+        title: "Start.ca",
+        description: "Summer Internship",
+        imgUrl: fadedcolor,
+
+    },
+    {
+        title: "The University Students’ Council",
+        description: "Student Ambasador",
+        imgUrl: fadedcolor,
+
+    },
+    {
+        title: "W Tech",
+        description: "Founder, Vice President Finacne",
+        imgUrl: fadedcolor,
+
+    },
+];
   const Files = [
     {
         title: "Resume",
@@ -52,7 +79,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="first">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Resume</Nav.Link>
+                      <Nav.Link eventKey="second">Experience</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
@@ -74,7 +101,16 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
+                        
                     <Row>
+                    {experience.map((item, index) => (
+                        <ProjectCard key={index} title={item.title} description={item.description} imgUrl={item.imgUrl} />
+                    ))}
+                    </Row>
+
+                    </Tab.Pane>
+                    <Tab.Pane eventKey="third">
+                      <Row>
                             {
                             Files.map((file, index) => {
                                 return (
@@ -91,9 +127,6 @@ export const Projects = () => {
                             })
                             }
                         </Row>
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="third">
-                      <p>place holder</p>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
