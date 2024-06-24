@@ -1,0 +1,21 @@
+.title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .title.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .title.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  

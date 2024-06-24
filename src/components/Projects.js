@@ -50,7 +50,7 @@ export const Projects = () => {
     },
     {
         title: "W Tech",
-        description: "Founder, Vice President Finacne",
+        description: "Founder, Vice President Finance",
         imgUrl: fadedcolor,
 
     },
@@ -82,7 +82,7 @@ export const Projects = () => {
                       <Nav.Link eventKey="second">Experience</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                      <Nav.Link eventKey="third">Resume</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -111,21 +111,9 @@ export const Projects = () => {
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
                       <Row>
-                            {
-                            Files.map((file, index) => {
-                                return (
-                                <Col key={index} sm={6} md={4}>
-                                  <div className="proj-imgbx">
-                                    <img src={file.imgUrl} alt={file.title}/>
-                                    <div className="proj-txtx">
-                                      <h4>{file.title}</h4>
-                                      <a href={file.fileUrl} download>Download</a>
-                                    </div>
-                                  </div>
-                                </Col>
-                                )
-                            })
-                            }
+                      {Files.map((item, index) => (
+                            <ProjectCard key={index} title={item.title} description={item.fileUrl} imgUrl={item.imgUrl} />
+                        ))}
                         </Row>
                     </Tab.Pane>
                   </Tab.Content>
