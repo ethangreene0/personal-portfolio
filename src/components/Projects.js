@@ -6,7 +6,7 @@ import projImg3 from "../assets/img/project-img3.png";
 import resumeImg from "../assets/img/resume-img.jpg";
 import fadedcolor from "../assets/img/fadedcolor.jpg"
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
+
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = () => {
@@ -110,10 +110,22 @@ export const Projects = () => {
 
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                      <Row>
-                      {Files.map((item, index) => (
-                            <ProjectCard key={index} title={item.title} description={item.fileUrl} imgUrl={item.imgUrl} />
-                        ))}
+                    <Row>
+                            {
+                            Files.map((file, index) => {
+                                return (
+                                <Col key={index} sm={6} md={4}>
+                                  <div className="proj-imgbx">
+                                    <img src={file.imgUrl} alt={file.title}/>
+                                    <div className="proj-txtx">
+                                      <h4>{file.title}</h4>
+                                      <a href={file.fileUrl} download>Download</a>
+                                    </div>
+                                  </div>
+                                </Col>
+                                )
+                            })
+                            }
                         </Row>
                     </Tab.Pane>
                   </Tab.Content>
