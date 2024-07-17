@@ -27,6 +27,17 @@ export const Projects = () => {
       description: "Lol",
       imgUrl: projImg3,
     },
+    {
+        title:"Expense Tracking App",
+        description: "",
+        imgUrl: projImg1,
+    },
+    {
+        title: "Leap Frog",
+        description: "",
+        imgUrl: projImg2,
+    },
+
   ];
 
   const experience = [
@@ -34,7 +45,6 @@ export const Projects = () => {
         title: "McDonalds Canada",
         description: "Swing Manager",
         imgUrl: fadedcolor,
-        
     },
     {
         title: "Start.ca",
@@ -59,7 +69,7 @@ export const Projects = () => {
     {
         title: "Resume",
         imgUrl: resumeImg,
-        fileUrl: require("../assets/Files/Resume.pdf"), 
+        fileUrl: require("../assets/Files/Resume.pdf"),
     },
   ];
 
@@ -101,7 +111,6 @@ export const Projects = () => {
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                        
                     <Row>
                     {experience.map((item, index) => (
                         <ProjectCard key={index} title={item.title} description={item.description} imgUrl={item.imgUrl} />
