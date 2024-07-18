@@ -4,6 +4,7 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import projImg4 from "../assets/img/project-img4.png";
+import projImg5 from "../assets/img/project-img5.png";
 import resumeImg from "../assets/img/resume-img.jpg";
 import fadedcolor from "../assets/img/fadedcolor.jpg"
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -20,23 +21,23 @@ export const Projects = () => {
     },
     {
       title: "Calculator App/Equation's",
-      description: "Created an Android application using Java and Android Studio with java script implementations",
+      description: "Android application using Java and Android Studio with java script implementations",
       imgUrl: projImg2,
     },
     {
       title: "Personal Portfolio",
-      description: "Lol",
+      description: "Created using ReactJS, HTML, JavaScript and CSS",
       imgUrl: projImg3,
     },
     {
         title:"Expense Tracking App",
-        description: "",
+        description: "Expense tracker that uses plaid API that gathers transactions and displays them in an ordered fassion, and displays expenses as a graph",
         imgUrl: projImg4,
     },
     {
         title: "Leap Frog",
-        description: "",
-        imgUrl: projImg4,
+        description: "Implementations of Unique Priority Queue ADT using arrays, handling pathfinding algorithms and managing inheritance and casting.",
+        imgUrl: projImg5,
     },
 
   ];
@@ -55,7 +56,7 @@ export const Projects = () => {
     },
     {
         title: "The University Students’ Council",
-        description: "Student Ambasador",
+        description: "Student Ambassador",
         imgUrl: fadedcolor,
 
     },
@@ -82,18 +83,18 @@ export const Projects = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn": ""}>
-                <h2>About Me</h2>
-                <p>Place Holder.</p>
+                <h2 className="dynamic-text display-4">About Me</h2>
+                <p className="dynamic-text lead">Welcome to my portfolio! Here you can explore my projects, professional experience, and download my resume.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Projects</Nav.Link>
+                      <Nav.Link eventKey="first" className="dynamic-text">Projects</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Experience</Nav.Link>
+                      <Nav.Link eventKey="second" className="dynamic-text">Experience</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Resume</Nav.Link>
+                      <Nav.Link eventKey="third" className="dynamic-text">Resume</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
@@ -105,38 +106,36 @@ export const Projects = () => {
                               <ProjectCard
                                 key={index}
                                 {...project}
-                                />
+                                className="dynamic-text"
+                              />
                             )
                           })
                         }
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="second">
-                    <Row>
-                    {experience.map((item, index) => (
-                        <ProjectCard key={index} title={item.title} description={item.description} imgUrl={item.imgUrl} />
-                    ))}
-                    </Row>
-
+                      <Row>
+                        {experience.map((item, index) => (
+                          <ProjectCard key={index} title={item.title} description={item.description} imgUrl={item.imgUrl} className="dynamic-text"/>
+                        ))}
+                      </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="third">
-                    <Row>
-                            {
-                            Files.map((file, index) => {
-                                return (
-                                <Col key={index} sm={6} md={4}>
-                                  <div className="proj-imgbx">
-                                    <img src={file.imgUrl} alt={file.title}/>
-                                    <div className="proj-txtx">
-                                      <h4>{file.title}</h4>
-                                      <a href={file.fileUrl} download>Download</a>
-                                    </div>
-                                  </div>
-                                </Col>
-                                )
-                            })
-                            }
-                        </Row>
+                      <Row>
+                        {Files.map((file, index) => {
+                          return (
+                            <Col key={index} sm={6} md={4}>
+                              <div className="proj-imgbx dynamic-text">
+                                <img src={file.imgUrl} alt={file.title}/>
+                                <div className="proj-txtx">
+                                  <h4>{file.title}</h4>
+                                  <a href={file.fileUrl} download>Download</a>
+                                </div>
+                              </div>
+                            </Col>
+                          )
+                        })}
+                      </Row>
                     </Tab.Pane>
                   </Tab.Content>
                 </Tab.Container>
