@@ -6,6 +6,7 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
   const [showTitle, setShowTitle] = useState(true);
   let timeoutId = null;
 
+  // Handle mouse enter event to hide the title
   const handleMouseEnter = () => {
     if (timeoutId) {
       clearTimeout(timeoutId);
@@ -13,12 +14,14 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
     setShowTitle(false);
   };
 
+  // Handle mouse leave event to show the title after a delay
   const handleMouseLeave = () => {
     timeoutId = setTimeout(() => {
       setShowTitle(true);
     }, 200); // delay of 200ms
   };
 
+  // Handle touch event to toggle title visibility
   const handleTouchStart = () => {
     setShowTitle(!showTitle);
   };
@@ -40,14 +43,13 @@ export const ProjectCard = ({ title, description, imgUrl }) => {
         onTouchStart={handleTouchStart} // Handle touch events for mobile devices
       >
         <div className="overlay">
-          <h4 className={`title ${showTitle ? 'visible' : 'hidden'}`}>
+          <h4 className={`title dynamic-text ${showTitle ? 'visible' : 'hidden'}`}>
             {title}
           </h4>
           <img src={imgUrl} alt={title} style={{ width: '100%' }} />
         </div>
-        <div className="proj-txtx">
+        <div className="proj-txtx dynamic-text">
           <span>{description}</span>
-          <span style={{ display: 'none' }}>{title}</span>
         </div>
       </div>
     </Col>

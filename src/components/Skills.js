@@ -89,7 +89,7 @@ export const Skills = () => {
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
-              <p>Place holder</p>
+              <p>I specialize in web and software development, creating responsive websites with HTML, CSS, JavaScript, and frameworks like React and Angular. I am proficient in Java, Python, and C++ for software applications, and have a strong grasp of data structures, algorithms, and operating system concepts.</p>
               <Carousel
                 responsive={responsive}
                 infinite={true}
