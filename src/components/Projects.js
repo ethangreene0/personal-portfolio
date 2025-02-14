@@ -39,6 +39,11 @@ export const Projects = () => {
         description: "Implementations of Unique Priority Queue ADT using arrays, handling pathfinding algorithms and managing inheritance and casting.",
         imgUrl: projImg5,
     },
+      {
+          title: "Sciecne Students' Council Website",
+          description: "Updating and Maintaining a website that provides crucial information to over 10,000 students and faculty",
+          imgUrl: projImg1
+      }
 
   ];
 
@@ -66,6 +71,17 @@ export const Projects = () => {
         imgUrl: fadedcolor,
 
     },
+      {
+          title:"WE AutoPilot",
+          description:"VP of Marketing",
+          imgUrl: fadedcolor,
+
+      },
+      {
+        title:"Science Students' Council",
+        description:"Internet Commissioner",
+        imgUrl: fadedcolor,
+      },
 ];
   const Files = [
     {

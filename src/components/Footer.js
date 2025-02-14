@@ -18,13 +18,13 @@ export const Footer = () => {
                 <img src={navIcon1} alt="LinkedIn Icon" />
               </a>
               <a href="https://www.instagram.com/egreene_11/" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon2} alt="Facebook Icon" />
+                <img src={navIcon2} alt="Instagram Icon" />
               </a>
               <a href="https://github.com/ethangreene0" target="_blank" rel="noopener noreferrer">
-                <img src={navIcon3} alt="Instagram Icon" />
+                <img src={navIcon3} alt="GitHub Icon" />
               </a>
             </div>
-            <p>Copyright 2024. All Rights Reserved</p>
+            <p>Copyright 2025. All Rights Reserved</p>
           </Col>
         </Row>
       </Container>
