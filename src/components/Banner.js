@@ -9,9 +9,9 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(100 - Math.random() * 500);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Student", "Software Engineer", "UI/UX Designer" ];
+  const toRotate = [ "Student", "Software Engineer", "AI/ML Engineer" ];
   const period = 2000;
 
   useEffect(() => {
@@ -46,8 +46,6 @@ export const Banner = () => {
       setIndex(prevIndex => prevIndex + 1);
     }
   }
-
-  
 
   return (
     <section className="banner" id="home">

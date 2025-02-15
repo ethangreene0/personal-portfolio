@@ -44,7 +44,7 @@ export const Skills = () => {
     {
       img: meter2,
       title: "Software Development",
-      description: "Designing and developing software applications using languages like Java, Python, and C++."
+      description: "Designing and developing software applications using languages like Java, Python, C and ASM."
     },
     {
       img: meter3,
